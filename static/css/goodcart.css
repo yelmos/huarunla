@@ -1,0 +1,508 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-width: 1190px;
+    background: #ededed;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.header{
+    background: url(../images/50393.png) repeat-x;
+    height: 124px;
+    box-shadow: 0 0 10px rgba(9, 2, 4, .12);
+    position: relative;
+    z-index: 100;
+}
+.header .center{
+    width: 1190px;
+    margin: 0 auto;
+    position: relative;
+    height: 180px;
+    z-index: 999;
+}
+.header .center .siteNav{
+    display: inline-block;
+    width: 100%;
+    padding-top: 8px;
+    position: relative;
+    z-index: 3;
+}
+.siteNavCityChoose {
+    color: #666;
+    float: left;
+    font-size: 14px;
+    margin: -11px -10px -10px -10px;
+    padding: 10px;
+    transition: all 0.5s ease;
+    position: relative;
+}
+.siteNavLogin {
+    float: left;
+    font-size: 12px;
+    color: #666;
+    margin-left: 25px;
+    overflow: hidden;
+}
+.siteNavLogin a:hover{
+    color: #e60000;
+}
+.siteNavEntry {
+    float: right;
+    font-size: 12px;
+    overflow: hidden;
+    margin-right: -12px;
+}
+.siteNavEntry a {
+    border-left: 1px solid #666;
+    color: #666;
+    display: inline-block;
+    line-height: 13px;
+    margin: 2px 20px 0 -1px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+.siteNavEntry a:hover{
+    color: #e60000;
+}
+.siteNavCityChoose .title {
+    float: left;
+    white-space: nowrap;
+    padding-right: 15px;
+    background: url(../images/50420.png) no-repeat right center;
+}
+.headerBody {
+    display: inline-block;
+    left: 0;
+    padding-top: 3px;
+    width: 100%;
+    height: 99px;
+    position: relative;
+}
+.headerLogo {
+    width: 341px;
+    height: 71px;
+    background-image: url('../images/4312385.png');
+    float: left;
+}
+.headerShoppingStep {
+    position: relative;
+    float: right;
+    margin-top: 28px;
+}
+.siteNavLogin a {
+    color: #666;
+    padding-right: 20px;
+    margin: 0 -1px 0 20px;
+    display: inline-block;
+    border-right: 1px solid #666;
+    cursor: pointer;
+}
+.headerShoppingStep > li{
+    float: left;
+    white-space: nowrap;
+    position: relative;
+}
+.headerShoppingStep > li.active .line{
+    background-color: #79b235;
+}
+.headerShoppingStep > li.active .radius{
+    background: url(../images/50461.png) no-repeat 0 0;
+}
+.headerShoppingStep > li > .line{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+}
+.headerShoppingStep > li > .radius {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    top: -14px;
+    left: 50%;
+    margin-left: -14px;
+    background: url(../images/50461.png) no-repeat 0 -28px;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    line-height: 28px;
+}
+.headerShoppingStep > li > .title{
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+    min-width: 175px;
+    float: left;
+    text-align: center;
+}
+.headerShoppingStep > li > .line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #d1d1d1;
+}
+.center{
+    width: 1190px;
+    margin: 0 auto;
+    margin-bottom:50px;
+}
+.web_map_My {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    padding: 15px 0 50px;
+}
+.web_map_My a{
+    color: #333;
+    cursor: pointer;
+}
+.web_map_My a:hover{
+    color: #e60000;
+}
+.web_map_My span.copyright {
+    color: #848484;
+    font-size: 16px;
+    margin: 0 0 0 60px;
+}
+.backededed {
+    background-color: #ededed;
+    width: 1190px;
+    margin: 0 auto;
+}
+.mani_cat_but {
+    width: 100%;
+    float: left;
+    background-color: #fff;
+    line-height: 45px;
+    height: 45px;
+    margin: 38px 0 20px 0;
+}
+.mani_cat_but .title {
+    float: left;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #333;
+}
+.mani_cat_but .but {
+    float: right;
+    margin-right: 20px;
+    font-size: 14px;
+    color: #aaa;
+    cursor: pointer;
+}
+.datles_table {
+    width: 100%;
+    float: left;
+    margin: 15px 0;
+}
+.delivery {
+    width: 100%;
+    float: left;
+    background-color: #fff;
+    line-height: 45px;
+    height: 45px;
+    font-size: 14px;
+}
+.delivery .totalAmount {
+    float: left;
+    margin-left: 25px;
+    font-size: 16px;
+    color: #fb000a;
+    font-weight: bold;
+}
+.th {
+    background-color: #fff9f9;
+}
+.th {
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid #ededed;
+    background-color: #fff9f9;
+    line-height: 45px;
+    text-indent: 15px;
+}
+.th .ld1 {
+    width: 130px;
+    margin-left: 10px;
+}
+.th .ldx{
+    float: left;
+    color: #333;
+    font-size: 14px;
+}
+.th .ld1 .checkbox {
+    vertical-align: baseline;
+    position: relative;
+    top: 2px;
+}
+.th .ld2 {
+    width: 249px;
+    padding: 0 0 0 16px;
+    text-align: center;
+}
+.th .ld3 {
+    width: 185px;
+    text-align: center;
+    margin-left: 10px;
+}
+.th .ld4 {
+    width: 113px;
+    text-align: center;
+}
+.th .ld6 {
+    width: 138px;
+    margin-left: 17px;
+    text-align: center;
+}
+.th .ld7 {
+    width: 160px;
+    text-align: center;
+}
+.th .ld8 {
+    width: 140px;
+    padding: 0 0 0 7px;
+}
+.checkbox {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    line-height: 13px;
+    vertical-align: middle;
+    margin-right: 10px;
+    cursor: pointer;
+    background: #fff;
+    position: relative;
+}
+.checkbox i {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    vertical-align: top!important;
+    border: 1px solid #cfcfcf;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+}
+.checkbox.active i{
+    background: url("../images/50377.png") no-repeat center center;
+}
+.ll {
+    width: 100%;
+    float: left;
+    background-color: #fff;
+    border-bottom: 1px dashed #e4e4e4;
+}
+.ll .active {
+    background-color: #fff9f9;
+}
+.ll li{
+    margin-bottom: 0;
+    border-bottom: 1px solid #e4e4e4;
+    float: left;
+    width: 100%;
+    padding: 10px 0;
+    line-height: 90px;
+}
+.merchantHeader{
+    background-color: #ffffff;
+    border-bottom: 1px solid #333333;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 45px;
+    padding: 0 0 0 25px;
+}
+.merchantHeader .merchantName {
+    font-size: 14px;
+    color: #333333;
+    display: inline-block;
+    width: 640px;
+}
+.merchantHeader .payPrice {
+    margin-left: 200px;
+    font-weight: normal;
+    text-align: center;
+    width: 138px;
+    display: inline-block;
+}
+.ll .ld{
+    float: left;
+    color: #333;
+    font-size: 14px;
+}
+.ll .ld1{
+    width: 130px;
+    margin-left: 25px;
+}
+.ll .ld1 .checkbox {
+    float: left;
+    margin: 35px 0 0 0;
+}
+.ll .ld2{
+    width: 256px;
+    margin-left: 9px;
+}
+.ll .img_view {
+    float: left;
+    margin-left: 24px;
+    width: 85px;
+    height: 85px;
+}
+.ll .ld2 a{
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 19px;
+    width: 245px;
+    word-break: break-all;
+}
+.ll .ld2 a:hover{
+    color: #e60000;
+}
+.ll .ld3 {
+    width: 185px;
+    text-align: center;
+    margin-left: 10px;
+    height: 85px;
+}
+.ll .ld4 {
+    width: 113px;
+    text-align: center;
+}
+.ll .ld6 {
+    width: 138px;
+    margin-left: 17px;
+    text-align: center;
+}
+.ll > li .midde {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 19px;
+}
+.ll .ld6 .less {
+    background: url("../images/50416.png") no-repeat center center;
+    cursor: pointer;
+    float: left;
+    height: 30px;
+    text-align: center;
+    transition: all 1s ease-out 0s;
+    width: 12px;
+}
+.ll .ld6 .add{
+    background: url("http://image2.ewj.com/2015/2/2/50882.png") no-repeat scroll center center;
+    cursor: pointer;
+    float: left;
+    height: 30px;
+    text-align: center;
+    transition: all 1s ease-out 0s;
+    width: 12px;
+}
+.ll .ld6 .quantity_txt {
+    border: 1px solid #d1d1d1;
+    float: left;
+    height: 28px;
+    line-height: 28px;
+    margin: 0 10px;
+    text-align: center;
+    width: 50px;
+}
+.ll .ld7 {
+    width: 160px;
+    text-align: center;
+}
+.font18 {
+    font-size: 18px;
+}
+.ll .ld8{
+    width: 140px;
+}
+.ll li .midde{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 19px;
+}
+.ll li .midde a:hover{
+    color: #e60000;
+}
+.jiesuan {
+    background-color: #fff;
+    float: left;
+    height: 74px;
+     line-height: 30px;
+    margin-bottom: 15px;
+    width: 100%;
+    margin-top: 30px;
+}
+.jiesuan .float_l {
+    padding-left: 25px;
+    float: left;
+}
+.jiesuan .float_r{
+    float: right;
+}
+.f14 {
+    margin-right: 36px;
+}
+.jiesuan .bd {
+    border-right: 1px solid #b6b6b6;
+    margin-right: 20px;
+    padding-right: 18px;
+    font-size: 14px;
+}
+.jiesuan .bd2 {
+    margin-right: 20px;
+    padding-right: 18px;
+    font-size: 14px;
+}
+.jiesuan b {
+    font-weight: normal;
+    color: #fb000a;
+    font-size: 22px;
+}
+.jiesuan .float_r .quantity{
+    display: inline-block;
+    margin: 10px 10px 0 40px;
+    font-size: 14px;
+    text-align: right;
+}
+.quantity .price {
+    font-style: normal;
+}
+.fb000a{
+    color: #fb000a;
+    font-size: 24px;
+}
+.jiesuan .pay {
+    background-color: #e14041;
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    margin-left: 0;
+    padding: 0 42px;
+    cursor: pointer;
+    height: 74px;
+    line-height: 74px;
+    -webkit-transition: all .25s;
+    -moz-transition: all .25s;
+    -ms-transition: all .25s;
+    -o-transition: all .25s;
+    transition: all .25s;
+}
+.float_l p a{
+    color: #333;
+    font-size: 14px;
+    margin-right: 28px;
+}
+.float_l p a:hover{
+    color: #e60000;
+}

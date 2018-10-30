@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <link rel="stylesheet" href="../css/goodcart.css">
+    <script type="text/javascript" src="../js/jquery-1.12.0.js"></script>
+    <script type="text/javascript" src="../js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../js/goodcart.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="center">
+            <div class="siteNav">
+                <div class="siteNavCityChoose">
+                    <span class="title">我在深圳</span>
+                </div>
+                <div class="siteNavLogin">
+                    您好，欢迎来e万家
+                    <a href="login.html">登录</a><a href="register.html">注册</a>
+                </div>
+                <div class="siteNavEntry">
+                    <a href="">收藏夹</a>
+                    <a href="">我的订单</a>
+                </div>
+            </div>
+            <div class="headerBody">
+                <a href="index.html" class="headerLogo"></a>
+                <ul class="headerShoppingStep">
+                    <li class="active">
+                        <div class="line"></div>
+                        <div class="radius">1</div>
+                        <span class="title">购物车</span>
+                    </li>
+                    <li>
+                        <div class="line"></div>
+                        <div class="radius">2</div>
+                        <span class="title">确认订单信息</span>
+                    </li>
+                    <li>
+                        <div class="line"></div>
+                        <div class="radius">3</div>
+                        <span class="title">提交订单</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="backededed">
+        <div class="mani_cat_but">
+            <span class="title">购物车</span>
+            <a class="but" href="index.html">继续购物 &gt;</a>
+        </div>
+        <div class="datles_table">
+            <div class="delivery">
+                <span class="totalAmount">全部商品<span>1</span>件</span>
+            </div>
+        </div>
+        <div class="th">
+            <div class="ld1 ldx">
+                <div class="checkbox enableSelect active">
+                    <i></i>
+                </div>全选&nbsp;
+            </div>
+            <div class="ld2 ldx">
+                商品
+            </div>
+            <div class="ld3 ldx">
+                规格属性
+            </div>
+            <div class="ld4 ldx">
+                单价(元)
+            </div>
+            <div class="ld6 ldx">
+                数量
+            </div>
+            <div class="ld7 ldx">
+                商品小计(元)
+            </div>
+            <div class="ld8 ldx">
+                操作
+            </div>
+        </div>
+        <ul class="ll">
+            <div class="merchantHeader">
+                <div class="checkbox active">
+                    <i></i>
+                </div>
+                <span class="merchantName">深圳保税仓</span>
+                    <span class="payPrice">
+                    <span>0</span>
+                </span>
+            </div>
+            <!--<li class="active">-->
+                <!--<div class="ld1 ld">-->
+                    <!--<div class="checkbox enableSelect active">-->
+                        <!--<input type="hidden">-->
+                        <!--<i></i>-->
+                    <!--</div>-->
+                    <!--<div class="img_view">-->
+                        <!--<img src="../images/15411601_85X85.jpg">-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="ld2 ld">-->
+                    <!--<a>【价格含税】欧缇丽葡萄籽保湿爽肤水200ml</a>-->
+                <!--</div>-->
+                <!--<div class="ld3 ld">-->
+                    <!--<span data-bind="text:attrsString"></span>-->
+                <!--</div>-->
+                <!--<div class="ld4 ld">¥149</div>-->
+                <!--<div class="ld6 ld">-->
+                    <!--<span class="midde">-->
+                        <!--<a class="less"></a>-->
+                        <!--<input class="quantity_txt">-->
+                        <!--<a class="add"></a>-->
+                        <!--<br>-->
+                        <!--<span class="canDelivery"></span>-->
+                    <!--</span>-->
+                <!--</div>-->
+                <!--<div class="ld7 ld">-->
+                    <!--<span class="font18" data-bind="text:'¥'+totalPayPrice()">¥149</span>-->
+                <!--</div>-->
+                <!--<div class="ld8 ld">-->
+                    <!--<span class="midde">-->
+                        <!--<a href="">删除</a>-->
+                    <!--</span>-->
+                <!--</div>-->
+            <!--</li>-->
+        </ul>
+        <div class="jiesuan">
+            <div class="float_l">
+                <div class="checkbox enableSelect active">
+                    <i></i>
+                </div>
+                <span class="f14" style="margin-right: 36px;">全选</span>
+                <span class="bd">已经选中<b class="selectNumber fb000a f18">0</b>件商品</span>
+                <span class="bd2">总重量<b data-bind="text:checkedTotalWeight">0.00</b>kg</span>
+                <p>
+                    <a href="" id="delAll">清空购物车</a>
+                    <!--<a href="" id="dels">删除</a>-->
+                </p>
+            </div>
+            <div class="float_r">
+                <div class="quantity">
+                    <p>
+                        <span>合计（不含运费）：</span>
+                        ¥<em class="price fb000a f18">0.00</em>
+                    </p>
+                </div>
+                <a class="pay">结算</a>
+            </div>
+        </div>
+    </div>
+    <div class="center">
+        <div class="web_map_My">
+            <a href="">
+                关于我们
+            </a>｜
+            <a href="">
+                联系我们
+            </a>｜
+            <a href="">
+                触屏版
+            </a>
+            <span class="copyright">
+                Copyright@华润万家有限公司  粤ICP备05036369号-4   ewj.com 版权所有
+            </span>
+        </div>
+    </div>
+</body>
+</html>

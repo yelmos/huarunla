@@ -1,0 +1,60 @@
+.reg_body{
+    padding: 35px 45px 45px 45px;
+    background: #fff url(/static/images/50432.png) repeat-x;
+}
+.reg_body_c{
+    margin-left: 200px;
+}
+.reg_body_c p{
+    margin-top: 10px;
+}
+.reg_body_c label{
+    display: inline-block;
+    width: 110px;
+    text-align: right;
+}
+.reg_body_c span{
+    color: #e60021;
+}
+.reg_body_c .btn{
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 11px;
+    color: #333;
+    font-size: 12px;
+    background: url(/static/images/50370.png) repeat-x;
+    border: 1px solid #d1d1d1;
+    -webkit-transition: all .25s;
+    -moz-transition: all .25s;
+    -ms-transition: all .25s;
+    -o-transition: all .25s;
+    transition: all .25s;
+    cursor: pointer;
+    outline: none;
+}
+.checkbox_p .checkbox{
+    margin-left: 45px;
+}
+.checkbox_p .reg_a{
+    float: none;
+    display: inline-block;
+    margin-left: 5px;
+    color: #e60000;
+}
+.button{
+    margin-left: 28px;
+}
+.checkbox_p .reg_span{
+    margin-left: 43px;
+    font-size: 16px;
+}
+.reg_span{
+    font-size: 14px;
+    margin-left: 115px!important;
+    color: #e60000;
+    display: block;
+}
+.text_input_span{
+    text-align: center;
+}

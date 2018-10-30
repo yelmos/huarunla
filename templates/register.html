@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="/static/css/register.css">
+    <link rel="stylesheet" href="/static/css/login.css">
+    <script type="text/javascript" src="/static/js/jquery-1.12.0.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/static/js/register.js"></script>
+    <script type="text/javascript" src="/static/js/login_input.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="header_center">
+            <img src="/static/images/4312385.png" alt="">
+            <div class="header_center_r">
+                <div>
+                    您好，欢迎您来到华润e万家！
+                    <span>|</span>
+                    <a href="">帮助中心</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body_center">
+        <div class="body_center_h">
+            <h1>用户登入</h1>
+            <a href="{% url 'huarun:login' %}">用户登录</a>
+        </div>
+        <div class="reg_body">
+            <div class="reg_body_c">
+                <form action="{% url 'huarun:register' %}" method="post" >
+                     {% csrf_token %}
+                    <p>
+                        <label for=""><span>*</span>用户名：</label>
+                        <input type="text" placeholder="请输入您的用户名，支持4-20字符" class="input" id="username" name="username">
+                        <span class="reg_span">{{ msg }}</span>
+                    </p>
+                    <p>
+                        <label for=""><span>*</span>手机号码：</label>
+                        <input type="text" placeholder="请输入您的手机号码" class="input" id="phoneNum" name="tel">
+                        <span class="reg_span"></span>
+                    </p>
+                    <p>
+                        <label for=""><span>*</span>验证码：</label>
+                        <input type="text" placeholder="请填写验证码" class="text_input" id="text" name="text2">
+
+                        <span class="text_input_span"></span>
+                        <a href="" class="text_input_a">看不清，换一张？</a>
+                        <span class="reg_span"></span>
+                    </p>
+                    <p>
+                        <label for=""><span>*</span>短信验证码：</label>
+                        <input type="text" placeholder="输入短信验证码" class="text_input" id="phoneText" name="text3">
+                        <button class="btn">获取短信验证码</button>
+                        <span class="reg_span"></span>
+                    </p>
+                    <p>
+                        <label for=""><span>*</span>设置密码：</label>
+                        <input type="password" placeholder="请设置您的密码，支持6-20位字符，区分大小写" class="input" id="password" name="password">
+                        <span class="reg_span"></span>
+                    </p>
+                    <p>
+                        <label for=""><span>*</span>确认密码：</label>
+                        <input type="password" placeholder="请确认密码" class="input" id="a_password">
+                        <span class="reg_span"></span>
+                    </p>
+                    <p>
+                        <label for="">推广码：</label>
+                        <input type="text" placeholder="输入推广码（可不填）" class="input" id="promo">
+                    </p>
+                    <p class="checkbox_p">
+                        <span class="checkbox">
+                            <input type="hidden" value="false" id="checkbox">
+                            <i></i>
+                        </span>
+                        我已阅读并同意
+                        <a href="" class="reg_a">e万家服务协议</a>
+                        <span class="reg_span"></span>
+                    </p>
+                    <p class="button">
+                        <button type="submit" id="submit">注册</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="foot_center">
+            <a href="">关于我们</a>
+            |
+            <a href="">联系我们</a>
+            |
+            <a href="">触屏版</a>
+            <span>Copyright@华润万家有限公司  粤ICP备05036369号-4   ewj.com 版权所有</span>
+        </div>
+    </div>
+</body>
+</html>
