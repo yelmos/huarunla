@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <title>主页</title>
+    <link rel="stylesheet" href="/static/css/swiper.css">
     <link rel="stylesheet" href="/static/css/index_css.css">
     <link rel="stylesheet" href="/static/css/iconfont.css">
     <link rel="stylesheet" href="/static/css/iconfont.woff">
     <script type="text/javascript" src="/static/js/jquery-1.12.0.js"></script>
     <script type="text/javascript" src="/static/js/jquery.cookie.js"></script>
     <script type="text/javascript" src="/static/js/index.js"></script>
+     <script type="text/javascript" src="/static/js/swiper.js"></script>
+     <script type="text/javascript" src="/static/js/home.js"></script>
 </head>
 <body>
     <div class="louti">
@@ -74,7 +77,10 @@
             </div>
             <div class="head_nav">
                 <ul class="head_nav_ul">
+                    {% if name %}
                      <li><a href="{% url 'huarun:logout' %}">注销</a></li>
+                    {% endif %}
+
                      <li class="line">|</li>
                     <li><a href="{% url 'huarun:login' %}">登录</a></li>
                     <li class="line">|</li>
@@ -135,7 +141,7 @@
             </div>
             <div class="head_body_center_r">
                 <span><img src="/static/images/3020025.png" alt=""></span>
-                <a href="goodcart.html">购物车 <span id="goodCartsNum">0</span> 件商品</a>
+                <a href="{% url 'huarun:goodcart' %}">购物车 <span id="goodCartsNum">0</span> 件商品</a>
             </div>
         </div>
     </div>
@@ -745,25 +751,43 @@
             </ul>
         </div>
     </div>
-    <div class="body_img">
-        <ul class="body_img_ul">
-
-                {% for lunbo in lunbos %}
-                <li><a href=""><img src="{{ lunbo.src }}" alt="" class="first"></a></li>
-                {% endfor %}
+{#    <div class="body_img">#}
+{#        <ul class="body_img_ul">#}
+        
+{#//轮播图。。。。。。。。。。。。。。。#}
+        <div class="swiper-container" id="body_img">
+        <div class="swiper-wrapper" id="body_img_ul">
+            {% for lunbo in lunbos %}
+            <div class="swiper-slide">
+                <img src="{{ lunbo.src }}" alt="">
+            </div>
+            {% endfor %}
+            
+            
+       
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+{#        <div class="swiper-button-next"></div>#}
+{#        <div class="swiper-button-prev"></div>#}
+    </div>
+{#                {% for lunbo in lunbos %}#}
+{#                <li><a href=""><img src="{{ lunbo.src }}" alt="" class="first"></a></li>#}
+{#                {% endfor %}#}
 
             <!--<li><a href=""><img src="../images/15411519.jpg" alt="" class="first"></a></li>-->
             <!--<li><a href=""><img src="../images/15411442.jpg" alt=""></a></li>-->
             <!--<li><a href=""><img src="../images/15411372.jpg" alt=""></a></li>-->
             <!--<li><a href=""><img src="../images/15401767.jpg" alt=""></a></li>-->
-        </ul>
-        <ul class="body_img_ul_2">
-<li class="active"></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div>
+{#        </ul>#}
+{#        <ul class="body_img_ul_2">#}
+{#<li class="active"></li>#}
+{#            <li></li>#}
+{#            <li></li>#}
+{#            <li></li>#}
+{#        </ul>#}
+{#    </div>#}
     <div class="center_body">
         <div class="center_body_now">
             <div class="tittle_list">
@@ -790,7 +814,7 @@
             <div class="shop_cont">
                 <ul>
                     {% for qianggou in qianggous %}
-                    <li class="newGoodsList">
+                    <li class="newGoodsList" >
                         <div class="mask">
                             <a href="" class="img_view">
                               <img src="{{ qianggou.src }}" alt="" height="258" width="258">
@@ -870,7 +894,7 @@
                     {% for newsgood in newsgoods %}
                       <li class="newGoods">
                         <div class="mask">
-                            <a href="" class="img_view">
+                            <a href="{% url 'huarun:goodsInfo' newsgood.id %}" class="img_view">
                                 <img src="{{ newsgood.src }}" alt="" width="280" height="280">
                                <span class="isNewSq"></span>
                                 <div class="tag">
@@ -891,7 +915,7 @@
                                    </a>
                                 </p>
                                 <p class="textPrimary price"><span>¥<strong style="margin-left: 4px;">{{ newsgood.price }}</strong>.00</span></p>
-                                <div class="btn_box"><a href="" onclick="">加入购物车</a><div class="s_join"><i class="white_arrow"></i><i class="icon_tick"></i><span class="gocar">已成功加入购物车</span></div></div>
+{#                                <div class="btn_box"><a href="{% url 'huarun:goodcart' %}" onclick="">加入购物车</a><div class="s_join"><i class="white_arrow"></i><i class="icon_tick"></i><span class="gocar">已成功加入购物车</span></div></div>#}
                            </div>
                        </div>
                     </li>

@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>购物车</title>
-    <link rel="stylesheet" href="../css/goodcart.css">
-    <script type="text/javascript" src="../js/jquery-1.12.0.js"></script>
-    <script type="text/javascript" src="../js/jquery.cookie.js"></script>
-    <script type="text/javascript" src="../js/goodcart.js"></script>
+    <link rel="stylesheet" href="/static/css/goodcart.css">
+    <script type="text/javascript" src="/static/js/jquery-1.12.0.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.cookie.js"></script>
+{#    <script type="text/javascript" src="/static/js/goodcart.js"></script>#}
+    <script type="text/javascript" src="/static/js/cart.js"></script>
 </head>
 <body>
     <div class="header">
@@ -16,8 +17,11 @@
                     <span class="title">我在深圳</span>
                 </div>
                 <div class="siteNavLogin">
-                    您好，欢迎来e万家
-                    <a href="login.html">登录</a><a href="register.html">注册</a>
+                    您好{{ name }}，欢迎来e万家
+                      {% if name %}
+                     <li><a href="{% url 'huarun:logout' %}">注销</a></li>
+                    {% endif %}
+                    <a href="{% url 'huarun:login' %}">登录</a><a href="{% url 'huarun:register' %}">注册</a>
                 </div>
                 <div class="siteNavEntry">
                     <a href="">收藏夹</a>
@@ -49,7 +53,7 @@
     <div class="backededed">
         <div class="mani_cat_but">
             <span class="title">购物车</span>
-            <a class="but" href="index.html">继续购物 &gt;</a>
+            <a class="but" href="{% url 'huarun:home' %}">继续购物 &gt;</a>
         </div>
         <div class="datles_table">
             <div class="delivery">
@@ -58,7 +62,7 @@
         </div>
         <div class="th">
             <div class="ld1 ldx">
-                <div class="checkbox enableSelect active">
+                <div class="checkbox enableSelect ">
                     <i></i>
                 </div>全选&nbsp;
             </div>
@@ -91,47 +95,73 @@
                     <span>0</span>
                 </span>
             </div>
-            <!--<li class="active">-->
-                <!--<div class="ld1 ld">-->
-                    <!--<div class="checkbox enableSelect active">-->
-                        <!--<input type="hidden">-->
-                        <!--<i></i>-->
-                    <!--</div>-->
-                    <!--<div class="img_view">-->
-                        <!--<img src="../images/15411601_85X85.jpg">-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="ld2 ld">-->
-                    <!--<a>【价格含税】欧缇丽葡萄籽保湿爽肤水200ml</a>-->
-                <!--</div>-->
-                <!--<div class="ld3 ld">-->
-                    <!--<span data-bind="text:attrsString"></span>-->
-                <!--</div>-->
-                <!--<div class="ld4 ld">¥149</div>-->
-                <!--<div class="ld6 ld">-->
-                    <!--<span class="midde">-->
-                        <!--<a class="less"></a>-->
-                        <!--<input class="quantity_txt">-->
-                        <!--<a class="add"></a>-->
-                        <!--<br>-->
-                        <!--<span class="canDelivery"></span>-->
-                    <!--</span>-->
-                <!--</div>-->
-                <!--<div class="ld7 ld">-->
-                    <!--<span class="font18" data-bind="text:'¥'+totalPayPrice()">¥149</span>-->
-                <!--</div>-->
-                <!--<div class="ld8 ld">-->
-                    <!--<span class="midde">-->
-                        <!--<a href="">删除</a>-->
-                    <!--</span>-->
-                <!--</div>-->
-            <!--</li>-->
+            {% for cart in carts %}
+             <li class="active" id="goods">
+                <div class="ld1 ld">
+                        <div class="warper" cartid="{{ cart.id }}" isselect="{{ cart.isselect }}">
+                            {% if cart.isselect %}
+                             <div class="checkbox enableSelect active">
+                        <input type="hidden">
+                        <i></i>
+                         </div>
+                                {% else %}
+                                       <div class="checkbox enableSelect">
+                        <input type="hidden">
+                        <i></i>
+                         </div>
+                            {% endif %}
+
+                    </div>
+
+{#                         <div class="checkbox enableSelect ">#}
+{#                        <input type="hidden">#}
+{#                        <i></i>#}
+{#                    </div>#}
+
+
+                    <div class="img_view">
+                        <img src="{{ cart.goods.smallimg1 }}">
+                    </div>
+                </div>
+                <div class="ld2 ld">
+                    <a>{{ cart.goods.name }}</a>
+                </div>
+                <div class="ld3 ld">
+                    <span data-bind="text:attrsString"></span>
+                </div>
+                <div class="ld4 ld"  id='ld4' price="{{ cart.goods.price }}">{{ cart.goods.price }}</div>
+                <div class="ld6 ld">
+                    <span class="midde">
+                        <a class="less" goodsid="{{ cart.goods.id }}"></a>
+                        <input class="quantity_txt" value="{{ cart.number }}">
+                        <a class="add" goodsid="{{ cart.goods.id }}"></a>
+                        <br>
+                        <span class="canDelivery"></span>
+                    </span>
+                </div>
+                <div class="ld7 ld">
+
+                    <span class="font18" data-bind="text:'¥'+totalPayPrice()">
+                        {{ cart.price }}
+                    </span>
+                </div>
+                <div class="ld8 ld">
+                    <span class="midde">
+                        <a href=""  class='sha' goodsid="{{ cart.goods.id }}">删除</a>
+                    </span>
+                </div>
+            </li>
+            {% endfor %}
+
+
         </ul>
         <div class="jiesuan">
             <div class="float_l">
-                <div class="checkbox enableSelect active">
+                <div class="all" isselect="false">
+                <div class="checkbox enableSelect ">
                     <i></i>
                 </div>
+                    </div>
                 <span class="f14" style="margin-right: 36px;">全选</span>
                 <span class="bd">已经选中<b class="selectNumber fb000a f18">0</b>件商品</span>
                 <span class="bd2">总重量<b data-bind="text:checkedTotalWeight">0.00</b>kg</span>

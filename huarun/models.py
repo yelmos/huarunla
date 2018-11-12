@@ -107,4 +107,21 @@ class User(models.Model):
     phone = models.IntegerField(max_length=30)
     pwd = models.CharField(max_length=32)
 
+class Cart(models.Model):
+    # 用户
+    user = models.ForeignKey(User)
+    # 商品
+    goods = models.ForeignKey(Newsgoods)
+    # 商品数量(选择)
+    number = models.IntegerField()
+
+    price = models.IntegerField()
+
+    # number = models.IntegerField()
+    # 是否选中
+
+    isselect = models.BooleanField(default=True)
+
+
+
 

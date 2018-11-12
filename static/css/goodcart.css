@@ -13,7 +13,7 @@ li{
     list-style: none;
 }
 .header{
-    background: url(../images/50393.png) repeat-x;
+    background: url(/static/images/50393.png) repeat-x;
     height: 124px;
     box-shadow: 0 0 10px rgba(9, 2, 4, .12);
     position: relative;
@@ -74,7 +74,7 @@ li{
     float: left;
     white-space: nowrap;
     padding-right: 15px;
-    background: url(../images/50420.png) no-repeat right center;
+    background: url(/static/images/50420.png) no-repeat right center;
 }
 .headerBody {
     display: inline-block;
@@ -112,7 +112,7 @@ li{
     background-color: #79b235;
 }
 .headerShoppingStep > li.active .radius{
-    background: url(../images/50461.png) no-repeat 0 0;
+    background: url(/static/images/50461.png) no-repeat 0 0;
 }
 .headerShoppingStep > li > .line{
     position: absolute;
@@ -128,7 +128,7 @@ li{
     top: -14px;
     left: 50%;
     margin-left: -14px;
-    background: url(../images/50461.png) no-repeat 0 -28px;
+    background: url(/static/images/50461.png) no-repeat 0 -28px;
     color: #fff;
     font-size: 15px;
     text-align: center;
@@ -390,7 +390,7 @@ li{
     line-height: 19px;
 }
 .ll .ld6 .less {
-    background: url("../images/50416.png") no-repeat center center;
+    background: url("/static/images/50416.png") no-repeat center center;
     cursor: pointer;
     float: left;
     height: 30px;

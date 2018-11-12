@@ -328,11 +328,11 @@ a{
 .nav_c_list{
     display: none;
 }
-.body_img{
+#body_img{
     position: relative;
     height: 440px;
 }
-.body_img .body_img_ul li{
+.body_img #body_img_ul li{
     position: absolute;
     top: 0;
     left: 0;

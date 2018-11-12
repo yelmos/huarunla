@@ -35,12 +35,12 @@
                     <p>
                         <label for=""><span>*</span>用户名：</label>
                         <input type="text" placeholder="请输入您的用户名，支持4-20字符" class="input" id="username" name="username">
-                        <span class="reg_span">{{ msg }}</span>
+                        <span class="reg_span">{{ msg1 }}</span>
                     </p>
                     <p>
                         <label for=""><span>*</span>手机号码：</label>
                         <input type="text" placeholder="请输入您的手机号码" class="input" id="phoneNum" name="tel">
-                        <span class="reg_span"></span>
+                        <span class="reg_span">{{ msg2 }}</span>
                     </p>
                     <p>
                         <label for=""><span>*</span>验证码：</label>
@@ -59,7 +59,7 @@
                     <p>
                         <label for=""><span>*</span>设置密码：</label>
                         <input type="password" placeholder="请设置您的密码，支持6-20位字符，区分大小写" class="input" id="password" name="password">
-                        <span class="reg_span"></span>
+                        <span class="reg_span">{{ msg3 }}</span>
                     </p>
                     <p>
                         <label for=""><span>*</span>确认密码：</label>
@@ -80,7 +80,7 @@
                         <span class="reg_span"></span>
                     </p>
                     <p class="button">
-                        <button type="submit" id="submit">注册</button>
+                        <input type="submit" value="注册">
                     </p>
                 </form>
             </div>

@@ -48,9 +48,11 @@ $(function(){
                 });
                 $(this).parent().find('.reg_span').html("");
                 $("#text").attr("flag","true");
+
             }else {
                 $(this).unbind("blur");
                 $(this).parent().find('.reg_span').html("请填写正确的验证码");
+
                 $(this).css("border","1px solid #e60000")
             }
         }else {
@@ -59,14 +61,14 @@ $(function(){
             $(this).css("border","1px solid #e60000")
         }
     });
-    //登录
+    登录
     $("#submit").click(function(){
         if ($('#password').attr('flag') == "true" && $('#text').attr('flag') == "true"){
             if ($.cookie("user")){
                 var arr = JSON.parse($.cookie("user"));
                 for(var i=0;i<arr.length;i++){
                     if ($('#username').val() == arr[i].username && $('#password').val() == arr[i].password){
-                        location.href = "index.html?username="+$('#username').val();
+                        // location.href = "index.html?username="+$('#username').val();
                         $('#username').blur(function(){
                             $(this).css("border","1px solid #dadada")
                         });

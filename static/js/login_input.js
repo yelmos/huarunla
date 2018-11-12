@@ -25,7 +25,7 @@ $(function(){
     $(".checkbox").find("i").click(function(){
         if ($(".checkbox").find("input").attr("value") == "false"){
             $(".checkbox").find("input").attr("value",true);
-            $(".checkbox").find("i").css("background-image","url(../images/50377.png)")
+            $(".checkbox").find("i").css("background-image","url(/static/images/50377.png)")
         }else {
             $(".checkbox").find("input").attr("value",false);
             $(".checkbox").find("i").css("background-image","")

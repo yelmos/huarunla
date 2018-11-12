@@ -82,7 +82,7 @@ a{
     width: 100%;
     height: 142px;
     overflow: hidden;
-    background: url("../images/14840029.png");
+    background: url("/static/images/14840029.png");
 }
 .head_body_center{
     width: 1190px;
@@ -122,7 +122,7 @@ a{
     height: 21px;
     position: absolute;
     cursor: pointer;
-    background: url(../images/50472.png) no-repeat 0 -99px;
+    background: url(/static/images/50472.png) no-repeat 0 -99px;
     right: 14px;
     top: 10px;
     border: 0 none;
@@ -278,7 +278,7 @@ a{
     left: 200px;
     width: 615px;
     height: 440px;
-    background: url('../images/50498.png');
+    background: url('/static/images/50498.png');
 }
 .nav_c_list ul{
     display: block;
@@ -341,7 +341,7 @@ a{
     width: 236px;
     height: 51px;
     padding: 5px 0 0 0;
-    background: url("../images/3020000.png") no-repeat right center;
+    background: url("/static/images/3020000.png") no-repeat right center;
     border-right: 1px solid #dedede;
     float: left;
 }
@@ -431,7 +431,7 @@ a{
     height: 14px;
     margin: 0 8px;
     vertical-align: middle;
-    background: url("../images/50384.png") no-repeat center 3px;
+    background: url("/static/images/50384.png") no-repeat center 3px;
 }
 .good_info{
     width: 100%;
@@ -595,7 +595,7 @@ a{
     width: 12px;
     height: 30px;
     text-align: center;
-    background: url(../images/50416.png) no-repeat center;
+    background: url(/static/images/50416.png) no-repeat center;
     float: left;
     cursor: pointer;
     transition: all 1s ease-out;
@@ -604,7 +604,7 @@ a{
     width: 12px;
     height: 30px;
     text-align: center;
-    background: url(../images/50415.png) no-repeat center;
+    background: url(/static/images/50415.png) no-repeat center;
     float: left;
     cursor: pointer;
     transition: all 1s ease-out;
@@ -737,7 +737,7 @@ a{
     width: 100%;
     float: left;
     padding-bottom: 10px;
-    background: url(../images/50412.png) repeat-x 0 top #fff;
+    background: url(/static/images/50412.png) repeat-x 0 top #fff;
 }
 .good_body_c .left .nav_list .list a{
     color: #333;
@@ -797,7 +797,7 @@ a{
     color: #000;
     height: 100px;
     padding: 20px 0 0 0;
-    background: url(../images/14840052.png) no-repeat right top;
+    background: url(/static/images/14840052.png) no-repeat right top;
 }
 .right_meg .ass_top .rate strong{
     color: #e60021;
@@ -844,7 +844,7 @@ a{
 }
 .right_meg .ass_body .comment-type ul li .ico{
     display: inline-block;
-    background: url(../images/14840027.png) no-repeat 0 0;
+    background: url(/static/images/14840027.png) no-repeat 0 0;
     width: 16px;
     height: 16px;
     margin: 0 3px -3px 0;
@@ -854,7 +854,7 @@ a{
     color: #999;
 }
 .right_meg .ass_body .comment-type ul li .active{
-    background: url(../images/14840027.png) no-repeat -20px 0;
+    background: url(/static/images/14840027.png) no-repeat -20px 0;
 }
 .meg_div_1{
     padding: 24px 22px 36px 22px;

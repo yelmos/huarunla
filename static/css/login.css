@@ -185,7 +185,7 @@ body{
 .button{
     margin-top: 10px;
 }
-.button button{
+.button input{
     color: #fff;
     font-size: 24px;
     background: #e04040;

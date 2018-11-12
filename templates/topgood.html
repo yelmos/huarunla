@@ -10,19 +10,15 @@
     <script type="text/javascript" src="/static/js/jquery-1.12.0.js"></script>
     <script type="text/javascript" src="/static/js/jquery.cookie.js"></script>
     <script type="text/javascript" src="/static/js/goodsInfo.js"></script>
-     <script type="text/javascript" src="/static/js/market.js"></script>
 </head>
 <body>
     <div class="head">
         <div class="head_center">
             <div class="headLogin">
-                <span id="user">您好</span> {{ name }}, 欢迎来<span id="headLogin_name">e万家</span> !
+                <span id="user">您好</span> , 欢迎来<span id="headLogin_name">e万家</span> !
             </div>
             <div class="head_nav">
                 <ul class="head_nav_ul">
-                     {% if name %}
-                     <li><a href="{% url 'huarun:logout' %}">注销</a></li>
-                    {% endif %}
                     <li><a href="{% url 'huarun:login' %}">登录</a></li>
                     <li class="line">|</li>
                     <li><a href="{% url 'huarun:register' %}"  class="reg">注册</a></li>
@@ -698,31 +694,30 @@
                 <span class="arrow"></span>
             </div>
            <div class="good_info">
-                              <div class="info_left">
+                <div class="info_left">
                     <div class="good_img">
-                        <img   src="{{ newsgood.smallimg1 }}" alt="" id="show1" style="height: 420px;width: 420px">
-                        <div class="move"></div>
+                        <img src="/static/images/15411604_420x420.jpg" alt="">
+                        <div class="move" style="display: none; left: 260px; top: 280px;"></div>
                     </div>
                     <div class="small_img">
-                        <div class="scrollbutton smallImgUp ico">&#xe670;</div>
+                        <div class="scrollbutton smallImgUp ico"></div>
                         <div class="imgMenu">
-                            <ul class="showimg">
-                                <li class="cur"><img src="{{ newsgood.smallimg1 }}" alt=""></li>
-                                <li><img src="{{ newsgood.smallimg2 }}" alt=""></li>
-                                <li><img src="{{ newsgood.smallimg3 }}" alt=""></li>
-                                <li><img src="{{ newsgood.smallimg4 }}" alt=""></li>
-                                <li><img src="{{ newsgood.smallimg5 }}" alt=""></li>
+                            <ul style="margin-left: 0px;">
+                                <li class=""><img src="{{ newsgood.smallimg1 }}" alt=""></li>
+                                <li class=""><img src="{{ newsgood.smallimg2 }}" alt=""></li>
+                                <li class=""><img src="{{ newsgood.smallimg3 }}" alt=""></li>
+                                <li class="cur"><img src="{{ newsgood.smallimg4 }}" alt=""></li>
+                                <li class=""><img src="{{ newsgood.smallimg5 }}" alt=""></li>
                             </ul>
                         </div>
-                        <div class="scrollbutton smallImgDown ico disabled">&#xe671;</div>
+                        <div class="scrollbutton smallImgDown ico disabled"></div>
                     </div>
-                    <div class="bigimg">
-                        <div style="position: absolute">
-                            <img src="{{ newsgood.smallimg1 }}"  alt="" id="show">
+                    <div class="bigimg" style="display: none;">
+                        <div style="position: absolute; left: -258.762px; top: -278.667px;">
+                            <img src="{{ newsgood.bigimg }}" alt="">
                         </div>
                     </div>
                 </div>
-
                 <div class="info_right">
                     <span class="name">{{ newsgood.name }}</span>
                     <span class="name">Caudalie Moisturizing Toner 200ml</span>
@@ -763,9 +758,9 @@
                         <span class="lat">有货</span>
                     </div>
                     <div class="buttom">
-                        <a href="{% url 'huarun:goodcart' %}" class="toCar" id="1"  goodsid="{{ newsgood.id }}" type="newGoods" style="background: rgb(225, 64, 65);">
+                        <a href="" class="toCar" id="1" type="newGoods" style="background: rgb(225, 64, 65);">
                             <i class="ico"></i>
-                            <span >加入购物车</span>
+                            <span>加入购物车</span>
                         </a>
                         <a href="" class="like" style="border: 1px solid rgb(209, 209, 209);">
                             <i></i>
