@@ -10,7 +10,7 @@ from huarun.models import *
 def index(request):
     lunbos = Lunbo.objects.all()
     enjoycitys =Enjoycity.objects.all()
-    freshs = Fresh.objects.all()
+     Fresh.objects.all()
     kuajins = Kuajin.objects.all()
     newsgoods = Newsgoods.objects.all()
     qianggous = Qianggou.objects.all()
